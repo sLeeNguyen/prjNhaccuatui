@@ -1,0 +1,98 @@
+.music-item {
+	display: inline-block;
+	margin: 0px 20px 10px 0px;
+	padding: 0px;
+	width: 212px;
+	height: 275px;
+}
+
+.music-item .mi-item-link {
+	margin-bottom: 8px;
+	position: relative;
+}
+
+.music-item .mil-album-info {
+	height: 212px;
+	position: relative;
+	z-index: 2;
+	margin-bottom: 8px;
+}
+
+.music-item .mi-item-link .avatar {
+	position: absolute;
+	float: left;
+	top: -100%;
+	z-index: 1;
+}
+.music-item .mi-item-link .avatar img {
+	height: 212px;
+}
+.music-item .mil-album-info .overlay {
+	height: 100%;
+	background: radial-gradient(circle, rgba(0,0,0,0.1249362216906601) 0%, rgba(0,0,0,0.4479699295558287) 73%, rgba(0,0,0,0.5519025138254916) 100%, rgba(0,0,0,0.9) 100%);
+	opacity: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s;
+}
+
+.mil-album-info .view-listen {
+	position: absolute;
+	right: 0px;
+	padding: 0px 5px 0px 15px;
+	background: linear-gradient(90deg, rgba(0,0,0,0.1249362216906601) 0%, rgba(0,0,0,0.6726890306794242) 22%, rgba(0,0,0,0.7148238621400983) 100%, rgba(0,0,0,0.9) 100%);
+}
+
+.mil-album-info .view-listen .icon-listen {
+	color: #c7c7c7;
+	font-size: 11px;
+	margin-right: 5px; 
+}
+
+.mil-album-info .view-listen .listen-count {
+	color: #c7c7c7;
+	font-size: 13px;
+	line-height: 24px;
+}
+
+.overlay .icon-play {
+	height: 60px;
+	transform: scale(0.5);
+	transition: 0.5s;
+}
+
+.music-item .mil-album-info:hover .overlay {
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+.music-item .mil-album-info:hover .icon-play {
+	transform: scale(1);
+}
+
+
+.music-item .mi-song-name {
+	font-size: 14px;
+	cursor: pointer;
+	color: #000000e0;
+	transition: all 0.3s;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 212px;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.music-item .mi-song-name:hover {
+	color: #2daaed !important;
+	text-decoration: none;
+}
+
+.music-item .mi-date-release {
+	font-size: 12px;
+	color: #908f8f;
+	font-family: Arial, sans-serif;
+	cursor: pointer;
+}

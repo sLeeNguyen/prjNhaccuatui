@@ -1,0 +1,15 @@
+.header {
+	padding: 7px 0px;
+	background-color: #ffffff;
+	text-align: center;
+	height: 56px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1000;
+	border-bottom: #dadada solid 1px;
+}
+
+.list-music {
+	float: left;
+}
