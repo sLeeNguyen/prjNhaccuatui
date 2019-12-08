@@ -76,8 +76,14 @@
 .tags-detail .tag-content a:hover, .view-more-list:hover {
 	background-color: #e74c3c;
 	border-radius: 5px;
-	color: #fff !important; 
-	width: auto;
+    color: #fff !important; 
+    transition: 0.1s all linear;
+}
+
+.tags-detail .tag-content a.active, .view-more-list.active {
+    background-color: #e74c3c;
+    border-radius: 5px;
+    color: #fff !important;
 }
 
 .tags-detail .view-more-list {
@@ -92,6 +98,10 @@
     font-weight: bold;
     cursor: pointer; 
     position: relative;
+}
+
+li#menu_tag_id_0:hover .dot-more span {
+    color: #fff;
 }
 
 .tag-content .mdi-hardware-keyboard-arrow-right {

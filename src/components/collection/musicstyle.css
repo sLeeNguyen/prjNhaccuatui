@@ -41,6 +41,7 @@
 	position: absolute;
 	right: 0px;
 	padding: 0px 5px 0px 15px;
+	z-index: 10;
 	background: linear-gradient(90deg, rgba(0,0,0,0.1249362216906601) 0%, rgba(0,0,0,0.6726890306794242) 22%, rgba(0,0,0,0.7148238621400983) 100%, rgba(0,0,0,0.9) 100%);
 }
 

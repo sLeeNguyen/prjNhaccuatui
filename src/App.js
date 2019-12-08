@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
 import CollectionPage from './page/CollectionPage';
-import Video from './components/video/Video';
+import VideoPage from './page/VideoPage';
+import PlayPage from './page/PlayPage';
+import BXHPage from './page/BXHPage';
+import Footer from './components/footer/Footer';
 
 class App extends Component {
     render() {
         return(
-            <Video />
+            <React.Fragment>
+                <div className="container content" style={{maxWidth: '1200px', display: 'flow-root'}}>
+                    <BXHPage/>
+                </div>     
+                <Footer/>
+            </React.Fragment>
         );
     }
 }

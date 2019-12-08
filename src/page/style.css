@@ -1,0 +1,22 @@
+.content {
+    margin-top: 70px;
+}
+
+.list-music {
+    float: left;
+}
+
+.left {
+    max-width: 870px !important;
+    margin-right: 15px;
+}
+
+.right {
+    padding: 0px !important;
+}
+
+.space {
+    width: 100%;
+    height: 50px;
+    float: left;
+}

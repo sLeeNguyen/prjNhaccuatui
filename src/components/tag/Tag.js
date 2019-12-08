@@ -11,7 +11,7 @@ class Tag extends Component {
                     <div className="tag-content category">
                         <h5>THỂ LOẠI</h5>
                         <ul>
-                            <li><a href="#"><span className="mdi-hardware-keyboard-arrow-right"></span>Nhạc Trẻ</a></li>
+                            <li><a href="#" className="active"><span className="mdi-hardware-keyboard-arrow-right"></span>Nhạc Trẻ</a></li>
                             <li><a href="#"><span className="mdi-hardware-keyboard-arrow-right"></span>Nhạc Hàn</a></li>
                             <li><a href="#"><span className="mdi-hardware-keyboard-arrow-right"></span>Trữ Tình</a></li>
                             <li><a href="#"><span className="mdi-hardware-keyboard-arrow-right"></span>Nhạc Hoa</a></li>
