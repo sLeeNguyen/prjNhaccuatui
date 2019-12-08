@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BoxChartMV from './BoxChartMV';
+import { Link } from 'react-router-dom';
 
 var classNames = require('classnames');
 const topic = [
@@ -23,7 +24,7 @@ class RightVideo extends Component {
         return(
             <React.Fragment >
                 <div className="discovery-playlist">
-                    <a id="weeklyDiscoveryLink" href="#">
+                    <Link to="#" id="weeklyDiscoveryLink">
                         <div className="content-playlist">
                             <h2>Gợi ý dành cho bạn</h2>
                             <p className="text-detail">Thưởng thức những ca khúc phù hợp nhất với bạn</p>
@@ -32,44 +33,43 @@ class RightVideo extends Component {
                                 <span className="btn-text">Nghe bài hát</span>
                             </p>
                         </div>
-                    </a>
+                    </Link>
                 </div>
                 { this.props.hide && <div className="advertisement1"></div> }
                 { this.props.hide && <div className="advertisement2"></div> }
                 <BoxChartMV/>
                 { this.props.hide && <div className="box-topic-music">
                     <div className="title-box">
-                        <a href="#" title="BXH MV" className="title">
+                        <Link to="#" title="BXH MV" className="title">
                             CHỦ ĐỀ HOT
                             <i className="fas fa-chevron-right icon-right"></i>
-                        </a>
+                        </Link>
                     </div>
                     {topic.map((item, index) => {
                         return (
                             <div className="single-topic" key={index}>
-                                <a href="#" title={item.name}>
+                                <Link to="#" title={item.name}>
                                     <img src={require('../../image/'+item.path)} alt=" "/>
-                                </a>
+                                </Link>
                             </div>
                         );
                     })}
                 </div> }
                 { this.props.hide && <div className="list-singer-hot">
                     <div className="title-box">
-                        <a href="#" title="Ca Sĩ | Nghệ Sĩ" className="title">
+                        <Link to="#" title="Ca Sĩ | Nghệ Sĩ" className="title">
                             CA SĨ | NGHỆ SĨ
                             <i className="fas fa-chevron-right icon-right"></i>
-                        </a>
+                        </Link>
                     </div>
                     {singerHot.map((item, index) => {
                         return(
                             <div className={classNames('singer-hot', {top: item.isTop})} key={index}>
-                                <a href="#" title={item.name}>
+                                <Link to="#" title={item.name}>
                                     <img src={require('../../image/' + item.path)} alt=" "/>
-                                </a>
-                                <a className="name-singer-main" href="#" title={item.name}>{item.name}</a>
-                            </div>
-                            
+                                </Link>
+                                <Link to="#" className="name-singer-main" title={item.name}>{item.name}</Link>
+                            </div>                           
                         );
                     })}                    
                 </div> }

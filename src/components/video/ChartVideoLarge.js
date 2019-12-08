@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class ChartVideoLarge extends Component {
     render() {
@@ -7,13 +8,13 @@ class ChartVideoLarge extends Component {
         return(
             <div className="box">
                 <div className="chart-video-large">
-                    <a title={item.song} href="#" className="img">
+                    <Link to="/play" title={item.song} className="img">
                         <span className="special-1">1</span>
                         <span className="icon-play">
-                            <img src={require('../../image/icons_play.png')} />
+                            <img src={require('../../image/icons_play.png')} alt=" "/>
                         </span>
-                        <img src={require('../../videoPic/' + item.path)} className="avatar"/>
-                    </a>
+                        <img src={require('../../videoPic/' + item.path)} className="avatar" alt=" "/>
+                    </Link>
                     <div className="overlay-large"></div>
                     <div className="name-video-large">
                         <span className="name">{item.song}</span>

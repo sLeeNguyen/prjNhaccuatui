@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Video from './Video';
+import { Link } from 'react-router-dom';
 
 import './video.css';
 
@@ -10,14 +11,14 @@ class ListVideo extends Component {
         return(
             <div className="list-box">
                 <div className="title-box">
-                    <a className="title" title={listMV.title} href="#">
+                    <Link to="#" className="title" title={listMV.title}>
                         {listMV.title}
                         <i className="fas fa-chevron-right icon-right"></i>
-                    </a>
+                    </Link>
                     <div className="btn-view-select">
                     {
                         listMV.option.map((item, index) => {
-                            return <a href="#" title={item} key={index} onClick={onClick}>{item}</a>;
+                            return <Link to="#" title={item} key={index} onClick={onClick}>{item}</Link>;
                         })
                     }
                     </div>

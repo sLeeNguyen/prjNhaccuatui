@@ -41,8 +41,9 @@ ul.menu-detail {
 
 .menu-detail li a:hover {
     border-radius: 4px;
-    color: #fff;
+    color: #fff !important;
     background: #e74c3c;
+    transition: 0.2s all linear;
 }
 
 .menu-detail li.cate a {
@@ -148,7 +149,7 @@ ul.menu-detail {
 
 .menu-detail .view-more-list ul a:hover {
     background: transparent;
-    color: red;
+    color: red !important;
     transition: all 0.2s linear;
 }
 
@@ -232,6 +233,7 @@ ul.menu-detail {
     height: 40px;
     transform: scale(0.5);
     transition: all 0.3s;
+    width: auto;
 }
 
 .video-main:hover .overlay {
@@ -334,7 +336,7 @@ ul.menu-detail {
 }
 
 .btn-view-select a:hover {
-    color: #fff;
+    color: #fff !important;
     background: #e74c3c;
     transition: all 0.2s linear;
 }
@@ -963,7 +965,7 @@ span.special.three {
 
 .user-upload {
     float: left;
-    min-width: 233px;
+    min-width: 220px;
     text-align: left;
     font-size: 14px;
 }

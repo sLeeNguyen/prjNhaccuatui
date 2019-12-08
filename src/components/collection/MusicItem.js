@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './musicstyle.css';
 import icon_play from '../../image/icons_play.png';
 
+import { Link } from "react-router-dom";
+
 class MusicItem extends Component {
     format(x) {
         return isNaN(x)?"":x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -12,7 +14,7 @@ class MusicItem extends Component {
 
         return (
             <div className="music-item" >
-                <a href="#" className="mi-item-link" title={item.name}>
+                <Link to="/play" className="mi-item-link" title={item.name}>
                     <div className="mil-album-info">
                         <span className="view-listen">
                             <i className="fas fa-headphones-alt icon-listen"></i>
@@ -23,8 +25,8 @@ class MusicItem extends Component {
                         </div>
                     </div>
                     <span className="avatar"><img src={require('../../musicPic/'+item.path)} alt=" "/></span>
-                </a>
-                <a href="#" className="mi-song-name">{item.name}</a>
+                </Link>
+                <Link to="#" className="mi-song-name">{item.name}</Link>
                 <div className="mi-date-release">{item.date}</div>
             </div>
         );

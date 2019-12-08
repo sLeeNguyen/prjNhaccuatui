@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './footerstyle.css';
 
 const images = [
@@ -43,13 +44,13 @@ class Footer extends Component {
                     detail.map((item, index) => {
                         if (!item.isLast) {
                             return (
-                                <div className="col-md-4 navigation">
+                                <div className="col-md-4 navigation" key={index}>
                                     <p className="title">{item.title}</p>
                                     <ul>
                                     {
                                         item.list.map((subitem, subindex) => {
                                             return <li key={subindex}>
-                                                <a href="#"><i className="fas fa-chevron-right chevron"></i>{subitem}</a>
+                                                <Link to="#"><i className="fas fa-chevron-right chevron"></i>{subitem}</Link>
                                             </li>
                                         })
                                     }
@@ -59,12 +60,12 @@ class Footer extends Component {
                             );
                         } else {
                             return(
-                                <div className="col-md-4 navigation last">
+                                <div className="col-md-4 navigation last" key={index}>
                                     <p className="title">{item.title}</p>
                                     <p className="top-keyword">
                                         {
                                             item.list.map((subitem, index) => {
-                                                return <a key={index} href="#">{subitem},</a>
+                                                return <Link to="#" key={index}>{subitem},</Link>
                                             })
                                         }
                                     </p>
@@ -72,9 +73,9 @@ class Footer extends Component {
                                     <ul>
                                         {
                                             item.image.map((subitem, index) => {
-                                                return <li><a href="#">
-                                                        <img className={subitem.class} src={require('./images_icons/' + subitem.path)}/>
-                                                    </a></li>
+                                                return <li key={index}><Link to="#">
+                                                        <img className={subitem.class} alt=" " src={require('./images_icons/' + subitem.path)}/>
+                                                    </Link></li>
                                             })
                                         }
                                     </ul>
@@ -98,9 +99,9 @@ class Footer extends Component {
                                 {
                                     images.map((item, index) => {
                                         return <div className="slide" key={index}>
-                                            <a href="#">
+                                            <Link to="#">
                                                 <img src={require('./images_icons/' + item.path)} alt=" "/>
-                                            </a>
+                                            </Link>
                                         </div>
                                     })
                                 }
@@ -117,7 +118,7 @@ class Footer extends Component {
                         }
                         <div className="line"></div>
                         <div className="box-info-company">
-                        <a href="#" title="NhacCuaTui"><img src={require("./images_icons/t_logo_company.png")} alt="" style={{width: '80px', height: '42px'}}/></a>
+                        <Link to="#" title="NhacCuaTui"><img src={require("./images_icons/t_logo_company.png")} alt=" " style={{width: '80px', height: '42px'}}/></Link>
                         <div className="info">
                             <p className="nameComp">Công ty cổ phần N C T</p>
                             <ul>
@@ -127,8 +128,8 @@ class Footer extends Component {
                                 Chí Minh cấp ngày 01/03/2008.</li>
                             </ul>
                         </div>
-                        <a href="#" className="permission one"><img src={require("./images_icons/bo_cong_thuong.png")} alt=""/></a>
-                        <a href="#" className="permission two"><img src={require('./images_icons/dmca.png')} alt=""/></a>
+                        <Link to="#" className="permission one"><img src={require("./images_icons/bo_cong_thuong.png")} alt=" "/></Link>
+                        <Link to="#" className="permission two"><img src={require('./images_icons/dmca.png')} alt=" "/></Link>
                         </div>
                     </div>
                 </div>
@@ -136,22 +137,22 @@ class Footer extends Component {
                     <div className="container" style={{maxWidth: '1200px'}}>
                         <ul className="list-contact">
                             <li className="contact-detail">
-                                <a href="#">
+                                <Link to="#">
                                 <i className="fas fa-map-marker-alt"></i>
                                 Đại học Bách Khoa Hà Nội, số 1, Đại Cồ Việt, HBT, HN
-                                </a>
+                                </Link>
                             </li>
                             <li className="contact-detail">
-                                <a href="#">
+                                <Link to="#">
                                 <i className="fas fa-envelope"></i>
                                 leenguyenboss@vsbg.ai.vn
-                                </a>
+                                </Link>
                             </li>
                             <li className="contact-detail">
-                                <a href="#">
+                                <Link to="#">
                                 <i className="fas fa-phone-alt"></i>
                                 08 6868 6688
-                                </a>
+                                </Link>
                             </li>
                             <li className="txt-coppyright">© 2019 NCT Corp. All rights reserved</li>
                         </ul>

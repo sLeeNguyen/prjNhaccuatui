@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
+
 import '../tag/icon/icon.css';
 
 var classNames = require('classnames');
@@ -34,7 +36,7 @@ class BoxControl extends Component {
                     <ul>
                         {
                             more.map((item, index) => {
-                                return <li><a href="#" title={item} key={index}><span className="mdi-hardware-keyboard-arrow-right"></span>{item}</a></li>;
+                                return <li><Link to="#" title={item} key={index}><span className="mdi-hardware-keyboard-arrow-right"></span>{item}</Link></li>;
                             })
                         }
                     </ul>
@@ -53,27 +55,25 @@ class BoxControl extends Component {
                             return (     
                                 <React.Fragment>                       
                                     <li key={index} className="cate havelink">
-                                        <h3><a href="#" title={item.cate} 
+                                        <h3><Link to="#" title={item.cate} 
                                             className={classNames({active: this.state.cate === index})} 
                                             onClick={e => {
                                                 this.setState({cate: index, subitem: ''});
                                             }}> 
-                                        {item.cate}</a></h3>
+                                        {item.cate}</Link></h3>
                                     </li>
                                     {
                                         item.list.map((subitem, subindex) => {
                                             
                                             return (
                                                 <li key={subindex}>
-                                                    <a href="#" title={subitem} className={classNames({active: this.state.subitem === index + '' + subindex})}           
+                                                    <Link to="#" href="#" title={subitem} className={classNames({active: this.state.subitem === index + '' + subindex})}           
                                                                                 onClick={e => {
-                                                                                    this.setState({cate: -1, subitem: index + '' + subindex})
-                                                                                    console.log(this.state.subitem);
-                                                                                    
+                                                                                    this.setState({cate: -1, subitem: index + '' + subindex})                                                                                    
                                                                                 }}>
                                                         <span className="mdi-hardware-keyboard-arrow-right"></span>
                                                         {subitem}
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             );
                                         })

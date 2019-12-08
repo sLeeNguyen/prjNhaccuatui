@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import './style.css';
 
 class ChartMusic extends Component {
     render() {
-<<<<<<< HEAD
         var { item, index } = this.props;
         var specClass = 'chart_tw';
         var rankChangeClass = 'chart_lw';
@@ -25,47 +25,42 @@ class ChartMusic extends Component {
                     {index + 1}
                 </span>
                 <span className={rankChangeClass}>
-=======
-        return(
-            <div className="sub-chart">
-                <span className="chart_tw special-1">1</span>
-                <span className="chart_lw nonechart up">
->>>>>>> parent of 202611a... demo1
                     <span className="icon"></span>
-                    <p>{ rankFlag > 0 && item.rankChange || rankFlag < 0 && 'MỚI' }</p>
+                    { rankFlag > 0 && <p>{ item.rankChange }</p> }
+                    { rankFlag < 0 && <p>MỚI</p> }
                 </span>
                 <div className="box_info_field">
-                    <a href="#" title="">
-                        <img src={require('../../musicPic/' + item.path)}></img>
-                    </a>
+                    <Link to="/play" title="">
+                        <img src={require('../../musicPic/' + item.path)} alt=" "></img>
+                    </Link>
                     <div className="infor">
-                        <a href="#" title="" className="name_song">{ item.song }</a>
+                        <Link to="/play" title="" className="name_song">{ item.song }</Link>
                         { 
                             item.name.map((i, key) => {
-                                return <a href="#" title="" className="list_name_singer" key={key}>{ i }</a>
+                                return <Link to="#" title="" className="list_name_singer" key={key}>{ i }</Link>
                             })
                         }
                     </div>
                 </div>
                 <div className="box_info_more_week">
-                    <a href="#" title="Vị trí xếp hạng cao nhất" className="peak_position">
+                    <Link to="#" title="Vị trí xếp hạng cao nhất" className="peak_position">
                         <span></span>
                         { item.rankMax }
-                    </a>
-                    <a href="#" title="Vị trí trên BXH tuần trước" className="last_weeks_position">
+                    </Link>
+                    <Link to="#" title="Vị trí trên BXH tuần trước" className="last_weeks_position">
                         <span></span>
                         { item.rankLastWeek }
-                    </a>
-                    <a href="#" title="Số tuần nằm trong BXH" className="weeks_on_chart">
+                    </Link>
+                    <Link to="#" title="Số tuần nằm trong BXH" className="weeks_on_chart">
                         <span></span>
                         { item.numOfWeeks }
-                    </a>
+                    </Link>
                 </div>
                 <div className="box_song_action">
-                    <a href="#" title="Thêm bài hát Tự Tâm vào playlist yêu thích" className="button_add_playlist">
-                    </a>
-                    <a href="#" title="Nghe bài hát Tự Tâm" className="button_playing">
-                    </a>
+                    <Link to="#" title="Thêm bài hát Tự Tâm vào playlist yêu thích" className="button_add_playlist">
+                    </Link>
+                    <Link to="/play" title="Nghe bài hát Tự Tâm" className="button_playing">
+                    </Link>
                 </div>
             </div>
         );

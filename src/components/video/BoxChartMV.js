@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ChartVideoLarge from './ChartVideoLarge';
 import ChartVideoNormal from './ChartVideoNormal';
+import { Link } from 'react-router-dom';
 
 var classNames = require('classnames');
 const BXHVietNam = [
@@ -77,18 +78,18 @@ class BoxChartMV extends Component {
         return(
             <div className="box-chart-mv">
                 <div className="title-box">
-                    <a href="#" title="BXH MV" className="title">
+                    <Link to="/bxh" title="BXH MV" className="title">
                         BXH MV
                         <i className="fas fa-chevron-right icon-right"></i>
-                    </a>
+                    </Link>
                 </div>
                 <div className="btn-tab-select">
-                    <a href="javascript:;" title="Việt Nam" className={classNames({active: this.state.currentCountry === 'vn'})} 
-                        onClick={this.handleClick('vn')}>Việt Nam</a>
-                    <a href="javascript:;" title="Âu Mỹ" className={classNames({active: this.state.currentCountry === 'usuk'})} 
-                        onClick={this.handleClick('usuk')}>Âu Mỹ</a>
-                    <a href="javascript:;" title="Hàn Quốc" className={classNames('last', {active: this.state.currentCountry === 'korea'})} 
-                        onClick={this.handleClick('korea')}>Hàn Quốc</a>
+                    <Link to="#" title="Việt Nam" className={classNames({active: this.state.currentCountry === 'vn'})} 
+                        onClick={this.handleClick('vn')}>Việt Nam</Link>
+                    <Link to="#" title="Âu Mỹ" className={classNames({active: this.state.currentCountry === 'usuk'})} 
+                        onClick={this.handleClick('usuk')}>Âu Mỹ</Link>
+                    <Link to="#" title="Hàn Quốc" className={classNames('last', {active: this.state.currentCountry === 'korea'})} 
+                        onClick={this.handleClick('korea')}>Hàn Quốc</Link>
                 </div>
                 <div className="list-chart-video">
                     {this.state.BXHMV}

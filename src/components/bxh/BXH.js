@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import ChartVideoNormal from '../video/ChartVideoNormal';
 import ChartMusic from './ChartMusic';
+import { Link } from 'react-router-dom';
+
+
 import './style.css';
 const BXHVietNam = {
     title: 'BẢNG XẾP HẠNG BÀI HÁT VIỆT NAM',
@@ -43,53 +45,48 @@ class BXH extends Component {
         })
         return result;
     }
+
     render() {
         return(
             <React.Fragment>
                 <div className="box_top_search">
                     <ul className="search_control_select">
                         <li>
-                            <a href="#" title="Bảng Xếp Hạng Việt Nam" className="active">Việt Nam</a>
+                            <Link to="#" title="Bảng Xếp Hạng Việt Nam" className="active">Việt Nam</Link>
                         </li>
                         <li>
-                            <a href="#" title="Bảng Xếp Hạng Âu Mỹ">Âu Mỹ</a>
+                            <Link to="#" title="Bảng Xếp Hạng Âu Mỹ">Âu Mỹ</Link>
                         </li>
                         <li>
-                            <a href="#" title="Bảng Xếp Hạng Hàn Quốc">Hàn Quốc</a>
+                            <Link to="#" title="Bảng Xếp Hạng Hàn Quốc">Hàn Quốc</Link>
                         </li>
                     </ul>
                 </div>
                 <div className="tile_box_key">
-                    <h1 className="nomore">VV</h1>
+                    <h1 className="nomore">{ this.state.listBXH.title }</h1>
                     <div className="btn_view_select">
-                        <a href="#" title="Bảng Xếp Hạng Bài Hát Việt Nam" className="active">
+                        <Link to="#" title="Bảng Xếp Hạng Bài Hát Việt Nam" className="active">
                             Bài hát
-                        </a>
+                        </Link>
                         <span></span>
-                        <a href="#" title="Bảng Xếp Hạng Video Việt Nam">
+                        <Link to="#" title="Bảng Xếp Hạng Video Việt Nam">
                             Video
-                        </a>
+                        </Link>
                     </div>
                 </div>
-                <div className="descriptionBXH">
-                Bảng Xếp Hạng NhacCuaTui cập nhật vào thứ Hai hàng tuần dựa trên số liệu thống kê thực tế trên desktop và mobile 
-                NhacCuaTui. Trong đó những trọng số quan trọng quyết định thứ hạng TOP 20 như sau: Nghe, Thích, Bình Luận, Chia sẻ, 
-                Tải v.v... Mỗi tương tác của người dùng đều tác động đến kết quả cuối cùng của BXH NhacCuaTui.        
-                </div>
+                <div className="descriptionBXH">{ this.state.listBXH.des }</div>
                 <div className="list_chart_page">
                     <div className="box_view_week">
-                        <a className="prev" href="#" title="Bảng xếp hạng tuần trước"></a>
+                        <Link to="#" className="prev" title="Bảng xếp hạng tuần trước"></Link>
                         <h2><strong>Tuần 47</strong> (18/11/2019 - 24/11/2019)</h2>
-                        <a className="next" href="#" title="Bảng xếp hạng tuần kế tiếp" style={{display: 'none'}}></a>
-                        <a href="#" className="active_play" title="Nghe Toàn Bộ"><span className="icon_playall"></span>Nghe Toàn Bộ</a>
+                        <Link to="#" className="next" title="Bảng xếp hạng tuần kế tiếp" style={{display: 'none'}}></Link>
+                        <Link to="#" className="active_play" title="Nghe Toàn Bộ"><span className="icon_playall"></span>Nghe Toàn Bộ</Link>
                     </div>
                     <div className="list_show_chart">
                         { this.generate(this.state.listBXH.list) }
                         
                     </div>
-                    
                 </div>
-                <ChartMusic/>
             </React.Fragment>
         );
     }

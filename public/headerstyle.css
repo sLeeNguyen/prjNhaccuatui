@@ -1,9 +1,0 @@
-.header {
-    border-bottom: #dadada solid 1px;
-    padding: 6px 0 7px 0;
-    position: fixed;
-    display: block;
-    width: 100%;
-    z-index: 999999;
-    top: 0;
-}

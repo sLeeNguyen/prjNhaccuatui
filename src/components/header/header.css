@@ -1,0 +1,204 @@
+.header {
+    border-bottom: #dadada solid 1px;
+    padding: 6px 0 7px 0;
+    position: fixed;
+    display: block;
+    width: 100%;
+    z-index: 999999;
+    min-width: 998px;
+    background-color: #fff;
+    margin: 0px;
+    top: 0;
+    height: 55px;
+}
+
+.top-menu .menu-left{
+    float: left;
+}
+.top-menu .menu-right{
+    float: right;
+}
+
+.top-menu .menu-left ul li {
+    float: left;
+    padding-bottom: 8px;
+    padding: 1px 15px 0 0;
+    position: relative;
+}
+
+.top-menu .menu-left .logo-nct {
+    padding: 0;
+}
+
+.icon_logo_menu {
+    width: 64px;
+    height: 32px;
+    float: left;
+    background: url(../../image/logo_new.png) no-repeat;
+    background-size: 100%;
+    margin: 6px 18px 0 0;
+}
+
+.icon-label-new {
+    padding: 0px 0px;
+    right: 5px;
+    top: 6px;
+    text-transform: uppercase;
+    position: absolute;
+    background: url(../../image/new.gif);
+    height: 9px;
+    width: 22px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 8px !important;
+}
+
+.top-menu .menu-left li a{
+    font-size: 14px;
+    color: #222222;
+    -o-transition-property: none !important;
+    -moz-transition-property: none !important;
+    -ms-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    line-height: 42px;
+    height: 42px;
+    float: left;
+}
+
+.boxSeach_action.new_header {
+    position: relative;
+    width: 280px;
+    height: 40px;
+    float: right;
+}
+
+.inputSearch.new_header {
+    color: rgba(0,0,0,0.5);
+    font-size: 14px;
+    width: 240px;
+    height: 40px;
+    border: 1px solid #2f80ed;
+    padding: 0 9px;
+    border-radius: 4px 0 0 4px;
+    float: left;
+    outline: none;
+    box-sizing: border-box;
+    text-indent: 6px;
+}
+
+.boxBSearch.new_header {
+    width: 40px;
+    height: 40px;
+    float: right;
+    border-radius: 0 4px 4px 0;   
+    background: linear-gradient(to right, #2f82ed 0%, #00afef 100%);
+}
+
+.b-search.new_header {
+    content: '';
+    margin: 10px 0 0 10px;
+    background: url(https://stc-id.nixcdn.com/v11/images/header_new/ic_search_new.png) no-repeat;
+    background-size: 19px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    border: none;
+    outline: none;
+}
+
+.box-action-right.new_header {
+    margin: 0 8px 0 0;
+    position: relative;
+    float: right;
+}
+
+.box-action-right .btn-power-user.new_header {
+    width: 25px;
+    height: 22px !important;
+    float: left;
+    background: url(../../image/ic_VIP_new.png) no-repeat;
+    padding: 0 0 20px 16px;
+    line-height: 32px;
+    font-size: 14px;
+    margin: 10px 17px 0 0;
+}
+
+.box-action-right span {
+    float: left;
+    margin-right: 7px;
+}
+
+.box-action-right.new_header span a {
+    color: #909090;
+    padding: 0 8px;
+}
+
+.box-action-right.new_header span a:hover {
+    color: #222222 !important;
+}
+
+.menu-right .user {
+    float: right;
+    position: relative;
+}
+
+.user .avata.new_header {
+    width: 40px;
+    height: 40px;
+    padding: 0 0 0 0;
+    margin: 2px 25px 0 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.user .control {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    top: 117%;
+    left: -23%;
+    width: 184px;
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    background: #ffffff;
+    transition: opacity 0.2s linear, visibility 0.2s linear;
+}
+
+.user:hover .control {
+    opacity: 1;
+    visibility: visible;
+}
+
+.control li a {
+    color: #222222;
+    float: left;
+    display: block;
+    width: 100px;
+    padding: 5px 5px 6px 0px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.user .control ul {
+    margin: 0 0 0 16px;
+}
+
+.user .control ul li {
+    float: left;
+    padding: 5px 0;
+    width: calc(100% - 16px);
+}
+
+
+
+
+
+
+

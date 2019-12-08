@@ -23,7 +23,7 @@ class PlayPage extends Component {
     render() {
         return(
             <div className="row">
-                <div className="adver3"><img src={require('../image/adver3.jpg')}/></div>
+                {/* <div className="adver3"><img src={require('../image/adver3.jpg')}/></div> */}
                 <div className="col-md-9 left">
                     <PlayVideo/>
                     <div className="space"></div>
